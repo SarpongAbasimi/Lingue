@@ -22,5 +22,12 @@ describe('Bank', () => {
             bank.withdraw(20);
             expect(bank.amount).toBe(10);
         });
+        test('that an error is thrown if user tries to withdraw more than available', () => {
+            let bank = new bank_1.Bank();
+            bank.deposit(10);
+            expect(() => {
+                bank.withdraw(20);
+            }).toThrow('sorry you don\'t have enough money in your account');
+        });
     });
 });
