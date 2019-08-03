@@ -11,6 +11,9 @@ class Bank {
         this._initialamount += depositAmount;
     }
     withdraw(withdrawAmount) {
+        if (withdrawAmount > this._initialamount) {
+            throw ('sorry you don\'t have enough money in your account');
+        }
         this._initialamount -= withdrawAmount;
     }
 }
