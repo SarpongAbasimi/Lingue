@@ -15,6 +15,9 @@ export class Bank {
   }
 
   withdraw(withdrawAmount: number){
+    if(withdrawAmount > this._initialamount){
+      throw('sorry you don\'t have enough money in your account') 
+    }
     this._initialamount -= withdrawAmount
   }
 
