@@ -1,7 +1,6 @@
 interface NameInterface {
   firstName: string;
   lastName: string;
-
 }
 
 export const name = (userName: NameInterface ) : string => {
