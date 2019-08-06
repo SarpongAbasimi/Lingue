@@ -10,4 +10,13 @@ export class Animal{
 }
 
 export class Dog extends Animal{
+  private _legs: number;
+  constructor(name: string, legs: number){
+    super(name);
+    this._legs = legs;
+  }
+
+  numLegs(){
+    return(this._legs);
+  }
 }
