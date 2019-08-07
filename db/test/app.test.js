@@ -5,6 +5,8 @@ describe('Get/', ()=> {
   it('must say hello', (done)=> {
     request(app)
     .get('/')
-    .expect(200, done)
+    .expect('Content-Type', /html/)
+    .expect(200)
+    .expect(/Hey/, done)
   });
 });
