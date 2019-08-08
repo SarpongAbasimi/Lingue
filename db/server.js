@@ -1,13 +1,17 @@
 const express = require('express'),
 path = require('path'),
+bodyParser = require('body-parser'),
 process = require('process');
 
 
 const app = express();
 
-app.use('/', require('./routes/index'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'))
+app.use(bodyParser.urlencoded({ extended: false}));
+// app.use(bodyParser.json());
+app.use('/', require('./routes/index'));
+
 
 const PORT = process.env.PORT || 3000
 
