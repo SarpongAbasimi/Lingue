@@ -16,8 +16,6 @@ describe('Post', ()=> {
     request(app)
     .post('/')
     .send({ name: 'chris'})
-    .expect(302,{
-      name: 'chris'
-    }, done)
+    .expect(302, done)
   });
 });
