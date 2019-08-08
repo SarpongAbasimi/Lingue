@@ -4,7 +4,10 @@ process = require('process')
 mongoose.connect(process.env.MONGO_DB_URI, {useNewUrlParser: true});
 
 const PostShema = new mongoose.Schema({
-  post:String
+  post: {
+    type: String,
+    required: true
+  }
 });
 
 let Post = new mongoose.model('Post', PostShema);
