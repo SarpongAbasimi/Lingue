@@ -16,7 +16,7 @@ describe('Post', ()=> {
     request(app)
     .post('/')
     .send({ name: 'chris'})
-    .expect(200,{
+    .expect(302,{
       name: 'chris'
     }, done)
   });
