@@ -3,6 +3,7 @@ path = require('path'),
 bodyParser = require('body-parser'),
 process = require('process');
 
+require('dotenv').config()
 
 const app = express();
 
