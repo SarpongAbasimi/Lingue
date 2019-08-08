@@ -18,20 +18,20 @@ mongoose.connect(process.env.MONGO_DB_URI, {useNewUrlParser: true}).catch(connec
   console.log(connectionError);
 });
 
-// let dbConnection = mongoose.connection;
+let dbConnection = mongoose.connection;
 
-// dbConnection.on('error', (err)=> {
-//   process.stdout.write(`db connection error: ${err}`)
-// });
+dbConnection.on('error', (err)=> {
+  process.stdout.write(`db connection error: ${err}`)
+});
 
-// dbConnection.once('open', ()=>{
-// console.log('db has been successfully connected')
-// });
+dbConnection.once('open', ()=>{
+console.log('db has been successfully connected')
+});
 
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, ()=>{
-  process.stdout.write(`Listening for request on Port ${PORT}`)
+  process.stdout.write(`Listening for request on Port ${PORT}\n`)
 });
 
 module.exports = app
