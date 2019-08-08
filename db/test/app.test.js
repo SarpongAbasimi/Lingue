@@ -1,5 +1,8 @@
 const app = require('../server'),
+process = require('process'),
 request = require('supertest');
+
+process.env.NODE_ENV='test'
 
 describe('GET/', ()=> {
   it('must say hello', (done)=> {
