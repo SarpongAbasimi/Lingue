@@ -12,7 +12,6 @@ app.set('views', path.join(__dirname, './views'))
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use('/', require('./routes/index'));
 
-
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, ()=>{
