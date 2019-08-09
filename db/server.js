@@ -26,8 +26,6 @@ dbConnection.on('error', (err)=> {
   process.stdout.write(`db connection error: ${err}`)
 });
 
-console.log(app)
-
 dbConnection.once('open', ()=>{
 console.log('db has been successfully connected')
 });
