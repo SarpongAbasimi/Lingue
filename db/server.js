@@ -22,12 +22,20 @@ mongoose.connect(whichENV.whichDB(), {useNewUrlParser: true}).catch(connectionEr
 
 let dbConnection = mongoose.connection;
 
+
 dbConnection.on('error', (err)=> {
   process.stdout.write(`db connection error: ${err}`)
 });
 
 dbConnection.once('open', ()=>{
 console.log('db has been successfully connected')
+});
+
+dbConnection.on('disconnected', (err)=> {
+  if(err){
+    process.stdout.write(err)
+  }
+  process.stdout.write('Lost connection to the MongoDB server\n')
 });
 
 const PORT = process.env.PORT || 3000
