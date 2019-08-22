@@ -5,22 +5,30 @@ import "fmt"
 var cat = "cat"
 
 func main() {
-	var surname = "Abasimi"
-	name := "sarpong"
-	fmt.Println(len("Hello World"))
-	fmt.Println(name + " " + surname)
-	fmt.Println("cat is called " + cat)
-	getUserInput()
+	// var surname = "Abasimi"
+	// name := "sarpong"
+	// fmt.Println(len("Hello World"))
+	// fmt.Println(name + " " + surname)
+	// fmt.Println("cat is called " + cat)
+	// getUserInput()
+	counter := 0
+	for counter <= 10 {
+		fmt.Println(counter)
+		counter++
+	}
 }
 func useVariable() {
 	fmt.Println("This is from the useVariable function")
 	fmt.Println(cat)
 	fmt.Println("hahahahaha")
+	fmt.Println(`1
+	2
+	3`)
 }
 
 func getUserInput() {
 	fmt.Print(" Please Enter a number: ")
-	var input int8
+	var input float32
 	fmt.Scanf("%f", &input)
 
 	output := input * 2
