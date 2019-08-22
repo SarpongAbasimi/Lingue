@@ -18,7 +18,25 @@ func main() {
 	// }
 	// fmt.Print("***************\n")
 	// loopFuc()
-	getUserInputNow()
+	// getUserInputNow()
+	createNumbers()
+}
+
+func createNumbers() {
+	for i := 1; i <= 100; i++ {
+		if i%3 == 0 {
+			fmt.Println(i)
+		}
+	}
+}
+
+func bigOrSmall() {
+	i := 10
+	if i > 10 {
+		fmt.Println("Big")
+	} else {
+		fmt.Println("Small")
+	}
 }
 
 func useVariable() {
