@@ -11,13 +11,14 @@ func main() {
 	// fmt.Println(name + " " + surname)
 	// fmt.Println("cat is called " + cat)
 	// getUserInput()
-	counter := 0
-	for counter <= 10 {
-		fmt.Println(counter)
-		counter++
-	}
-	fmt.Print("***************\n")
-	loopFuc()
+	// counter := 0
+	// for counter <= 10 {
+	// 	fmt.Println(counter)
+	// 	counter++
+	// }
+	// fmt.Print("***************\n")
+	// loopFuc()
+	getUserInputNow()
 }
 
 func useVariable() {
@@ -45,5 +46,22 @@ func loopFuc() {
 		} else {
 			fmt.Println("odd")
 		}
+	}
+}
+
+func getUserInputNow() {
+	fmt.Println("Please enter a number")
+	var input float32
+	fmt.Scanf("%f", &input)
+
+	switch input {
+	case 0:
+		fmt.Println("you entered 0")
+	case 1:
+		fmt.Println("you entered one")
+	case 2:
+		fmt.Println("you enntered two")
+	default:
+		fmt.Println(" ahahaha I don't knwo what was entered")
 	}
 }
