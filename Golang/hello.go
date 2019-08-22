@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var name string = "sarpong"
+	var surname = "Abasimi"
+	name := "sarpong"
 	fmt.Println(len("Hello World"))
-	fmt.Println(name)
+	fmt.Println(name + " " + surname)
 }
