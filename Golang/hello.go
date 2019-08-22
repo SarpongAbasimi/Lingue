@@ -16,7 +16,10 @@ func main() {
 		fmt.Println(counter)
 		counter++
 	}
+	fmt.Print("***************\n")
+	loopFuc()
 }
+
 func useVariable() {
 	fmt.Println("This is from the useVariable function")
 	fmt.Println(cat)
@@ -33,4 +36,14 @@ func getUserInput() {
 
 	output := input * 2
 	fmt.Println(output)
+}
+
+func loopFuc() {
+	for i := 0; i < 10; i++ {
+		if i%2 == 0 {
+			fmt.Println("even")
+		} else {
+			fmt.Println("odd")
+		}
+	}
 }
