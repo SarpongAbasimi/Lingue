@@ -19,11 +19,11 @@ func main() {
 	// fmt.Print("***************\n")
 	// loopFuc()
 	// getUserInputNow()
-	var x [5]int
-	x[4] = 10
-	for i := 0; i < len(x); i++ {
-		fmt.Println(x[i])
-	}
+	// var x [5]int
+	// x[4] = 10
+	// for i := 0; i < len(x); i++ {
+	// 	fmt.Println(x[i])
+	// }
 }
 
 func createNumbers() {
