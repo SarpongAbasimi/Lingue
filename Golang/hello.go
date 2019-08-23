@@ -20,9 +20,10 @@ func main() {
 	// loopFuc()
 	// getUserInputNow()
 	var x [5]int
-	fmt.Println(x)
-	x[2] = 10
-	fmt.Println(x)
+	x[4] = 10
+	for i := 0; i < len(x); i++ {
+		fmt.Println(x[i])
+	}
 }
 
 func createNumbers() {
