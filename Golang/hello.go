@@ -28,7 +28,16 @@ func main() {
 	// for _, value := range x {
 	// 	fmt.Println("value", value)
 	// }
-	createArray()
+	createSlice()
+}
+
+func createSlice() {
+	var secondSlice []int
+	mySliceVaraible := make([]int, 3)
+	for index, elementsInSlice := range mySliceVaraible {
+		fmt.Println(secondSlice)
+		fmt.Println("index", index, "elements", elementsInSlice)
+	}
 }
 
 func createArray() {
