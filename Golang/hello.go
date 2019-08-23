@@ -24,9 +24,23 @@ func main() {
 	// for i := 0; i < len(x); i++ {
 	// 	fmt.Println(x[i])
 	// }
-	var x [3]int
-	for _, value := range x {
-		fmt.Println("value", value)
+	// var x [3]int
+	// for _, value := range x {
+	// 	fmt.Println("value", value)
+	// }
+	createArray()
+}
+
+func createArray() {
+	myArray := [5]int{
+		10,
+		11,
+		12,
+		13,
+		14,
+	}
+	for _, arrayElements := range myArray {
+		fmt.Println(arrayElements, "was in the myArray array")
 	}
 }
 
