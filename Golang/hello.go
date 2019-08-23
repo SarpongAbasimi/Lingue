@@ -24,6 +24,10 @@ func main() {
 	// for i := 0; i < len(x); i++ {
 	// 	fmt.Println(x[i])
 	// }
+	var x [3]int
+	for _, value := range x {
+		fmt.Println("value", value)
+	}
 }
 
 func createNumbers() {
