@@ -19,7 +19,10 @@ func main() {
 	// fmt.Print("***************\n")
 	// loopFuc()
 	// getUserInputNow()
-	fizzBuzz()
+	var x [5]int
+	fmt.Println(x)
+	x[2] = 10
+	fmt.Println(x)
 }
 
 func createNumbers() {
