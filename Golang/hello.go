@@ -30,13 +30,29 @@ func main() {
 	// }
 	// createSlice()
 	// appendToSlice()
-	dictionary()
+	secondDictionary()
 }
 
 func dictionary() {
 	mydictionary := make(map[string]string)
 	mydictionary["name"] = "chris"
+	mydictionary["age"] = "ten"
+	mydictionary["country"] = "jor"
 	fmt.Println(mydictionary["name"])
+	fmt.Println(mydictionary["age"])
+
+}
+
+func secondDictionary() {
+	mydictionary := map[string]string{
+		"hello": "hi",
+		"food":  "Banku",
+		"money": "I dont know",
+	}
+
+	for _, value := range mydictionary {
+		fmt.Println(value)
+	}
 }
 
 func appendToSlice() {
