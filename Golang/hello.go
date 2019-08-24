@@ -28,7 +28,19 @@ func main() {
 	// for _, value := range x {
 	// 	fmt.Println("value", value)
 	// }
-	createSlice()
+	// createSlice()
+	appendToSlice()
+}
+
+func appendToSlice() {
+	initialSlice := []int{1, 3, 5, 9}
+	twoInSlice := []int{5, 7}
+	for _, elementsInInitialSlice := range initialSlice {
+		appendTotwoInSlice := append(twoInSlice, elementsInInitialSlice)
+		fmt.Println(appendTotwoInSlice)
+	}
+	secondAppend := append(twoInSlice, 100, 20)
+	fmt.Println(secondAppend)
 }
 
 func createSlice() {
