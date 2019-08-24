@@ -29,7 +29,14 @@ func main() {
 	// 	fmt.Println("value", value)
 	// }
 	// createSlice()
-	appendToSlice()
+	// appendToSlice()
+	dictionary()
+}
+
+func dictionary() {
+	mydictionary := make(map[string]string)
+	mydictionary["name"] = "chris"
+	fmt.Println(mydictionary["name"])
 }
 
 func appendToSlice() {
