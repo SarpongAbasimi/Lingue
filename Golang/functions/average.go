@@ -18,7 +18,13 @@ func secondAverage(scoreList []float64) float64 {
 	return total
 }
 
+func multipleReturn() (int, int) {
+	return 5, 9
+}
+
 func main() {
 	inputSlice := []float64{2, 4, 5, 6}
+	five, nine := multipleReturn()
 	fmt.Println(average(inputSlice))
+	fmt.Println(nine, " =>", five)
 }
