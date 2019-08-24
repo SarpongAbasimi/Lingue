@@ -22,9 +22,15 @@ func multipleReturn() (int, int) {
 	return 5, 9
 }
 
+func add(userInput ...int) int {
+	fmt.Println(userInput)
+	return 5
+}
+
 func main() {
-	inputSlice := []float64{2, 4, 5, 6}
-	five, nine := multipleReturn()
-	fmt.Println(average(inputSlice))
-	fmt.Println(nine, " =>", five)
+	// inputSlice := []float64{2, 4, 5, 6}
+	// five, nine := multipleReturn()
+	// fmt.Println(average(inputSlice))
+	// fmt.Println(nine, " =>", five)
+	add(4, 5, 6, 7)
 }
