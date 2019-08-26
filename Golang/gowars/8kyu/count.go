@@ -12,6 +12,15 @@ func mapss(x []int) []int {
 	return answerContainer
 }
 
+func monkeyCount(n int) []int {
+	number := n
+	countMokey := make([]int, 0)
+	for i := 1; i <= number; i++ {
+		countMokey = append(countMokey, i)
+	}
+	return countMokey
+}
+
 func main() {
 	arrayOfInt := []int{
 		2,
@@ -20,4 +29,6 @@ func main() {
 		6,
 	}
 	fmt.Println(mapss(arrayOfInt))
+	fmt.Println(monkeyCount(1))
+
 }
