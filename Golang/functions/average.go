@@ -27,10 +27,15 @@ func add(userInput ...int) int {
 	return 5
 }
 
+func name(userInput string) {
+	fmt.Println("Your name is" + " " + userInput)
+}
+
 func main() {
 	// inputSlice := []float64{2, 4, 5, 6}
 	// five, nine := multipleReturn()
 	// fmt.Println(average(inputSlice))
 	// fmt.Println(nine, " =>", five)
-	add(4, 5, 6, 7)
+	// add(4, 5, 6, 7)
+	name("chris")
 }
