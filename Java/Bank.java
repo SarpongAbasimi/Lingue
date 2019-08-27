@@ -13,6 +13,11 @@ public class Bank{
     System.out.println("Your new balance is " + "£" + balance);
   }
 
+  public void withdraw(double amount){
+    balance -= amount;
+    System.out.println("Your new balance is " + "£" + balance);
+  }
+
  public static void main(String[] args) {
    Bank newBank = new Bank(0, "chris");
    newBank.updateBalance(20);
