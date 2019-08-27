@@ -1,5 +1,9 @@
 package main
 
+import (
+	"strings"
+)
+
 func mapss(x []int) []int {
 	userInput := x
 	answerContainer := make([]int, len(userInput))
@@ -19,6 +23,28 @@ func monkeyCount(n int) []int {
 	return countMokey
 }
 
-func main() {
+func arithmetic(a int, b int, operator string) int {
+	typeOfOperator := operator
+	var answer int
 
+	switch typeOfOperator {
+	case "add":
+		answer = a + b
+	case "subtract":
+		answer = a - b
+	case "multiply":
+		answer = a * b
+	case "divide":
+		answer = a / b
+	}
+	return answer
+}
+
+func findShort(s string) int {
+	stringOfWords := s
+	splitStringOfwords := strings.Split(stringOfWords, " ")
+}
+
+func main() {
+	findShort("hello he is hey book cat car ba")
 }
