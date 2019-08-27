@@ -1,6 +1,7 @@
 package main
 
 import (
+	"sort"
 	"strings"
 )
 
@@ -43,6 +44,12 @@ func arithmetic(a int, b int, operator string) int {
 func findShort(s string) int {
 	stringOfWords := s
 	splitStringOfwords := strings.Split(stringOfWords, " ")
+	storeWordCount := make([]int, 0)
+	for _, value := range splitStringOfwords {
+		storeWordCount = append(storeWordCount, len(value))
+	}
+	sort.Ints(storeWordCount)
+	return storeWordCount[0]
 }
 
 func main() {
