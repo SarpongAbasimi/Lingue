@@ -31,6 +31,6 @@ public class Bank{
   //  newBank.updateBalance(20);
    newBank.withdraw(70);
    // Args represents command like arguments.
-   System.out.println(Arrays.toString(args));
+  //  System.out.println(Arrays.toString(args));
   }
 }
