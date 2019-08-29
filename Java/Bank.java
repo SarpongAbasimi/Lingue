@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Bank{
   double deposit;
   String accontOwnerName;
@@ -28,5 +30,7 @@ public class Bank{
    Bank newBank = new Bank(0, "chris");
   //  newBank.updateBalance(20);
    newBank.withdraw(70);
+   // Args represents command like arguments.
+   System.out.println(Arrays.toString(args));
   }
 }
