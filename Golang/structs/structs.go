@@ -18,5 +18,6 @@ func main() {
 	fmt.Println(name.name)
 	var myStruct Person
 	myStruct.age = 90
+	myStruct.country = "China"
 	fmt.Println(myStruct.age)
 }
