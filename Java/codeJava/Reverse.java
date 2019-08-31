@@ -3,9 +3,9 @@ import java.util.Arrays;
 
 public class Reverse{
 
-  public Reverse(){
+  // public Reverse(){
 
-  }
+  // }
 
   public String[] revese(String inputWord){
     String [] splitUserInput = inputWord.split("");
