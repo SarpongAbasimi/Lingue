@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"sort"
 	"strings"
 )
@@ -51,7 +52,18 @@ func findShort(s string) int {
 	sort.Ints(storeWordCount)
 	return storeWordCount[0]
 }
+func oddCount(n int) int {
+	// get all odd number between 0 and n
+	allOddNumbers := make([]int, 0)
+	for i := 0; i < n; i++ {
+		if i%2 != 0 {
+			allOddNumbers = append(allOddNumbers, i)
+		}
+	}
+	fmt.Println(allOddNumbers)
+	return len(allOddNumbers)
+}
 
 func main() {
-	findShort("hello he is hey book cat car ba")
+
 }
