@@ -64,6 +64,27 @@ func oddCount(n int) int {
 	return len(allOddNumbers)
 }
 
+func boolToWord(word bool) string {
+	switch word {
+	case true:
+		return "Yes"
+	case false:
+		return "No"
+	}
+	return "nothing"
+}
+
+func takeTwoWords(name string) string {
+	splitName := strings.Split(name, " ")
+	answerContainer := make([]string, 0)
+	for index := 0; index <= len(splitName)-1; index++ {
+		answerContainer = append(answerContainer, string(splitName[index][0]))
+	}
+	return strings.Join(answerContainer, ".")
+}
+
 func main() {
+	name := "Sam Harris"
+	takeTwoWords(name)
 
 }
