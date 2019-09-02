@@ -87,5 +87,4 @@ func takeTwoWords(name string) string {
 func main() {
 	name := "Sam Harris"
 	takeTwoWords(name)
-
 }
