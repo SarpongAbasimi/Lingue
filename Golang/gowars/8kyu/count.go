@@ -75,7 +75,8 @@ func boolToWord(word bool) string {
 }
 
 func takeTwoWords(name string) string {
-	splitName := strings.Split(name, " ")
+	convertnameToUpperCase := strings.ToUpper(name)
+	splitName := strings.Split(convertnameToUpperCase, " ")
 	answerContainer := make([]string, 0)
 	for index := 0; index <= len(splitName)-1; index++ {
 		answerContainer = append(answerContainer, string(splitName[index][0]))
