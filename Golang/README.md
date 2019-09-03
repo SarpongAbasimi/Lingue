@@ -1,0 +1,2 @@
+- These directories contains my learning of the ``GO`` programming language.
+- No testing implemented yet.
