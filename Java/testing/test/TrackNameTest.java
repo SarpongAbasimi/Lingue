@@ -1,11 +1,16 @@
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class TrackNameTest {
     @Test
     public void itHasAddNameMethod(){
         TrackName trackNewName = new TrackName();
-        assertEquals(trackNewName.addName("Chris"), true);
+        trackNewName.addName(("chris"));
+        ArrayList<String> container  = trackNewName.container;
+        assertEquals(container.size(),1);
+        assertEquals(container.contains("chris"), true);
     }
 }
