@@ -7,7 +7,11 @@ public class TrackName {
         container = new ArrayList<String>();
     }
 
-    public boolean addName(String userName){
-        return container.add(userName);
+    public void addName(String userName){
+        container.add(userName);
+    }
+
+    public ArrayList<String> showNames(){
+        return container;
     }
 }

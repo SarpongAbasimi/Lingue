@@ -13,4 +13,12 @@ public class TrackNameTest {
         assertEquals(container.size(),1);
         assertEquals(container.contains("chris"), true);
     }
+
+    @Test
+    public  void showNames(){
+        TrackName trackAnotherName = new TrackName();
+        trackAnotherName.addName("chris");
+        trackAnotherName.addName("ben");
+        ArrayList<String>showStoredNames = trackAnotherName.showNames();
+    }
 }
