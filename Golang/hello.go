@@ -5,31 +5,30 @@ import "fmt"
 var cat = "cat"
 
 func main() {
-	// var surname = "Abasimi"
-	// name := "sarpong"
-	// fmt.Println(len("Hello World"))
-	// fmt.Println(name + " " + surname)
-	// fmt.Println("cat is called " + cat)
-	// getUserInput()
-	// counter := 0
-	// for counter <= 10 {
-	// 	fmt.Println(counter)
-	// 	counter++
-	// }
-	// fmt.Print("***************\n")
-	// loopFuc()
-	// getUserInputNow()
-	// var x [5]int
-	// x[4] = 10
-	// for i := 0; i < len(x); i++ {
-	// 	fmt.Println(x[i])
-	// }
-	// var x [3]int
-	// for _, value := range x {
-	// 	fmt.Println("value", value)
-	// }
-	// createSlice()
-	// appendToSlice()
+	var surname = "Abasimi"
+	name := "sarpong"
+	fmt.Println(len("Hello World"))
+	fmt.Println(name + " " + surname)
+	fmt.Println("cat is called " + cat)
+	getUserInput()
+	counter := 0
+	for counter <= 10 {
+		fmt.Println(counter)
+		counter++
+	}
+	fmt.Print("***************\n")
+	loopFuc()
+	getUserInputNow()
+	var x [5]int
+	x[4] = 10
+	for i := 0; i < len(x); i++ {
+		fmt.Println(x[i])
+	}
+	for _, value := range x {
+		fmt.Println("value", value)
+	}
+	createSlice()
+	appendToSlice()
 	secondDictionary()
 }
 
