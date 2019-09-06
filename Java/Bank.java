@@ -25,12 +25,10 @@ public class Bank{
       System.out.println("You can only withdraw bwtween £0 and " + "£" + balance);
     }
   }
-
+  
  public static void main(String[] args) {
    Bank newBank = new Bank(0, "chris");
-  //  newBank.updateBalance(20);
-   newBank.withdraw(70);
-   // Args represents command like arguments.
-  //  System.out.println(Arrays.toString(args));
+  //  newBank.withdraw(70);
+  System.out.println(newBank);
   }
 }
