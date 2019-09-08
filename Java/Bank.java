@@ -1,13 +1,16 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Bank{
   double deposit;
   String accontOwnerName;
   double balance;
+  ArrayList <String> justLearn;
 
   public Bank(double initialDeposit, String name){
     deposit = initialDeposit;
     accontOwnerName = name;
+    this.justLearn = new ArrayList<String>();
   }
 
   public void updateBalance(double amount){
@@ -28,7 +31,9 @@ public class Bank{
   
  public static void main(String[] args) {
    Bank newBank = new Bank(0, "chris");
+   newBank.justLearn.add("hahahaht");
   //  newBank.withdraw(70);
   System.out.println(newBank);
+  System.out.println(newBank.justLearn);
   }
 }

@@ -4,11 +4,11 @@ public class TrackName {
     ArrayList<String> container;
 
     public  TrackName(){
-        container = new ArrayList<String>();
+        this.container = new ArrayList<String>();
     }
 
     public void addName(String userName){
-        container.add(userName);
+        this.container.add(userName);
     }
 
     public ArrayList<String> showNames(){

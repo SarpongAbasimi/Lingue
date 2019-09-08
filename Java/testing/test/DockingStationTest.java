@@ -11,4 +11,9 @@ public class DockingStationTest {
         boolean result  = bike instanceof Bikes;
         assertEquals(result, true);
     }
+
+    @Test
+    public void stationDocksBike(){
+
+    }
 }
