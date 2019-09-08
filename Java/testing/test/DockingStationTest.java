@@ -7,7 +7,8 @@ public class DockingStationTest {
 
     @Test
     public void respondsToReleaseBike(){
-        boolean result = newDockingStation.release_bike();
+        Bikes bike = newDockingStation.releaseBike();
+        boolean result  = bike instanceof Bikes;
         assertEquals(result, true);
     }
 }

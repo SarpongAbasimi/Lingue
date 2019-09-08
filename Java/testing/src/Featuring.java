@@ -1,6 +1,7 @@
 public class Featuring {
-    public void main(String[] args){
+    public static void main(String[] args){
         DockingStation dockingStation = new DockingStation();
         Bikes bike = dockingStation.releaseBike();
+        System.out.println(bike.working());
     }
 }

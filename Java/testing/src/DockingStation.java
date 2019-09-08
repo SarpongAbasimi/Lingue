@@ -1,5 +1,6 @@
 public class DockingStation {
-    public boolean release_bike(){
-        return true;
+    public Bikes releaseBike(){
+        Bikes bike = new Bikes();
+        return bike;
     }
 }
