@@ -17,7 +17,7 @@ public class DockingStation {
     }
 
     public Bike releaseBike(){
-        if (this.bikesAvailable.size() == 0){
+        if (noBike()){
             throw new RuntimeException("There are no bikes available");
         }
         Bike bike = new Bike();
@@ -37,5 +37,8 @@ public class DockingStation {
 
     private Boolean fullCapacity(){
         return this.bikesAvailable.size() > 20;
+    }
+    private Boolean noBike(){
+        return this.bikesAvailable.size() == 0;
     }
 }
