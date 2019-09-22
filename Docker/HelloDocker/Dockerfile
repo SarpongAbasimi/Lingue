@@ -1,6 +1,6 @@
 FROM python:3.6
-WORKDIR /flaskyapp
+WORKDIR /myapp
 COPY . ./
 RUN pip install -r requirements.txt
-EXPOSE 3000
+EXPOSE 5000
 CMD python app.py
