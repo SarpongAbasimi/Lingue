@@ -11,7 +11,7 @@ public class Airport {
         this.airportParking.add(plane);
     }
 
-    public Boolean takeOff(Plane plane){
-        return true;
+    public void takeOff(Plane plane){
+        this.airportParking.remove(plane);
     }
 }

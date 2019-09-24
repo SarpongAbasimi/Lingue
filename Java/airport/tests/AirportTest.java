@@ -31,8 +31,9 @@ class AirportTest {
         void takeOff(){
             Plane plane = new Plane();
             airport.lands(plane);
-            Boolean result = airport.takeOff(plane);
-            assertTrue(result);
+            airport.takeOff(plane);
+            Boolean result = airport.airportParking.contains(plane);
+            assertFalse(result);
         }
     }
 }
