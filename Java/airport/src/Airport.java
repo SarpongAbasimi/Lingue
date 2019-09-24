@@ -1,6 +1,14 @@
+import java.util.ArrayList;
+
 public class Airport {
-    public Boolean lands(Plane plane){
-        return true;
+    ArrayList airportParking;
+
+    public Airport(){
+        this.airportParking = new ArrayList();
+
+    }
+    public void lands(Plane plane){
+        this.airportParking.add(plane);
     }
 
     public Boolean takeOff(Plane plane){

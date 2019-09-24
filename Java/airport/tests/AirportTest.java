@@ -18,7 +18,8 @@ class AirportTest {
     @DisplayName("When passed a plane, it can land that plane")
     void landPlane(){
         Plane plane = new Plane();
-        Boolean result = airport.lands(plane);
+        airport.lands(plane);
+        Boolean result = airport.airportParking.contains(plane);
         assertTrue(result);
     }
 
