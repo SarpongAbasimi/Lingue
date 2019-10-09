@@ -14,6 +14,10 @@ class FizzBuzzBangPop{
     }
   }
 
+  static Boolean isPrime(int number){
+    return false;
+  }
+
   public static void main(String[] args) {
     for (int i = 0; i < 100; i++) {
       System.out.println(i + ": " + convert(i) + " score: "+ score(i));
