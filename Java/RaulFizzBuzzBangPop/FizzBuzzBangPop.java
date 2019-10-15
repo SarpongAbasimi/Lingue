@@ -15,8 +15,14 @@ class FizzBuzzBangPop{
   }
 
   static Boolean isPrime(int number){
-    return false;
+    for(int input  = 0; input < number; input++){
+      if(number % input == 0){
+        return false;
+      }
+    }
+    return number > 1
   }
+
 
   public static void main(String[] args) {
     for (int i = 0; i < 100; i++) {
