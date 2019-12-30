@@ -1,9 +1,12 @@
-//abstract class Container {
-//  var container : List[String] = List("dsp");
-//}
-
 object Container {
   var container: List[String] = List();
+
+  def main(args: Array[String]): Unit = {
+    val nameOfPeopleIhaveMet = new NameTracker
+    nameOfPeopleIhaveMet.store("chris")
+    nameOfPeopleIhaveMet.store("sarp")
+    nameOfPeopleIhaveMet.printNames
+  }
 }
 
 class NameTracker {
@@ -14,5 +17,9 @@ class NameTracker {
 
   def getContainerLength:Int = {
     Container.container.length
+  }
+
+  def printNames: Unit = {
+    Container.container.foreach(name => println(name))
   }
 }
