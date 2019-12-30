@@ -2,9 +2,17 @@
 //  var container : List[String] = List("dsp");
 //}
 
-class NameTracker{
+object Container {
+  var container: List[String] = List();
+}
 
-  def store(personYouMeetName: String) : String = {
-    personYouMeetName
+class NameTracker {
+
+  def store(personYouMeetName: String) : Unit = {
+    Container.container = personYouMeetName :: Container.container
+  }
+
+  def getContainerLength:Int = {
+    Container.container.length
   }
 }
