@@ -2,12 +2,19 @@ import  collection.mutable.Buffer
 
 class DockingStation(val dockedStation: Buffer[Bike] = collection.mutable.Buffer[Bike]()) {
 
-  def releaseBike:Bike = {
+  @throws(classOf[Exception])
+  def releaseBike:Unit = {
     val exceptionMessage: String = " There are no bikes available"
-    if (dockedStation.length < 1) throw new Exception(exceptionMessage) else new Bike
+    if (isEmpty) throw new Exception(exceptionMessage) else new Bike
   }
 
+  @throws(classOf[Exception])
   def dock(bike: Bike): Unit = {
-    dockedStation.append(bike)
+    val message: String = "The docking station is full"
+    if(!isEmpty) throw  new Exception(message) else dockedStation.append(bike)
+  }
+
+  private def isEmpty:Boolean = {
+    dockedStation.isEmpty
   }
 }

@@ -2,14 +2,6 @@ import org.scalatest.BeforeAndAfter
 
 class DockingStationTest extends org.scalatest.FunSuite with BeforeAndAfter {
 
-  test("that it responds to release bike"){
-    val dockingStation = new DockingStation
-    val bike = new Bike
-    dockingStation.dock(bike)
-    val releaseBike = dockingStation.releaseBike
-    assert(releaseBike.isInstanceOf[Bike])
-  }
-
   test("that the docking station can dock a bike"){
     val dockingStation = new DockingStation
     val bike = new Bike
@@ -29,6 +21,18 @@ class DockingStationTest extends org.scalatest.FunSuite with BeforeAndAfter {
     val dockingStation = new DockingStation
     assertThrows[Exception]({
       dockingStation.releaseBike
+    })
+  }
+
+  test("that only one one bike can be docked at a docking station"){
+    val firstBike = new Bike
+    val secondBike = new Bike
+    val dockingStation = new DockingStation()
+
+    dockingStation.dock(firstBike)
+
+    assertThrows[Exception]({
+      dockingStation.dock(secondBike)
     })
   }
 }
