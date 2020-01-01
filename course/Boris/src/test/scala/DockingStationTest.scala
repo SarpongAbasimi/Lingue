@@ -25,14 +25,14 @@ class DockingStationTest extends org.scalatest.FunSuite with BeforeAndAfter {
   }
 
   test("that only one one bike can be docked at a docking station"){
-    val firstBike = new Bike
-    val secondBike = new Bike
+    val lastBike = new Bike
     val dockingStation = new DockingStation()
-
-    dockingStation.dock(firstBike)
+    for( _ <-  1 to 20){
+      dockingStation.dock(new Bike)
+    }
 
     assertThrows[Exception]({
-      dockingStation.dock(secondBike)
+      dockingStation.dock(lastBike)
     })
   }
 }
