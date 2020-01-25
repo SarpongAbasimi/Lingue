@@ -1,0 +1,10 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/chrissongz/Desktop/practice/course/play-samples-play-scala-hello-world-tutorial/app/views/main.scala.html:7:7: not found: value title[0m
+[0m[[0m[31merror[0m] [0m[0m<!--@(title: String)(content: Html)-->[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/chrissongz/Desktop/practice/course/play-samples-play-scala-hello-world-tutorial/app/views/main.scala.html:13:13: not found: value title[0m
+[0m[[0m[31merror[0m] [0m[0m    <title>@title</title>[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/chrissongz/Desktop/practice/course/play-samples-play-scala-hello-world-tutorial/app/views/main.scala.html:29:6: not found: value content[0m
+[0m[[0m[31merror[0m] [0m[0m    @content[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
