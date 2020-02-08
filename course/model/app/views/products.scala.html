@@ -1,0 +1,12 @@
+@(products: List[Product])
+
+@main("Product Page") {
+  <div>
+    <span>These are the products we currently have in store</span>
+    <ul>
+      @for(product <- products){
+        <p>Product Name: @{product.name} | Product Colour: @{product.colour}</p>
+      }
+    </ul>
+  </div>
+}
