@@ -1,3 +1,6 @@
+import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
+
 def aPartialFuction: PartialFunction[String, Unit] = {
   case "hey" => println("Yas")
   case "nah" => println("Nah")
@@ -49,4 +52,21 @@ class Chris extends Person {
   override def name(name: String) = {
     name
   }
+}
+
+
+//Futures in Scala
+def sleepFor(amountOfTime: Int) = {
+  Thread.sleep(amountOfTime)
+}
+
+val future = Future{
+  for(i <- 1 until  3){
+    sleepFor(i)
+    println(s"Sleeping for $i")
+  }
+}
+
+future.onComplete {
+  case answer: scala.util.Try[Unit] => answer
 }
