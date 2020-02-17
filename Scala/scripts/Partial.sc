@@ -70,3 +70,23 @@ val future = Future{
 future.onComplete {
   case answer: scala.util.Try[Unit] => answer
 }
+
+//Basic For Loop
+val basicForCompresion: List[String] = List("name", "age", "country")
+
+for(i <- basicForCompresion){
+  println(i)
+}
+
+// Guard Filtering Values
+
+for (i <- basicForCompresion if i.startsWith("na")){
+  println(i)
+}
+
+val numbers: List[Int] = List(2, 4, 5, 7)
+
+//Yield
+val yieldResults = for (i <- numbers) yield i * 4
+
+println(yieldResults)
