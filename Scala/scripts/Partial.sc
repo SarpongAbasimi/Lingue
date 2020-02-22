@@ -90,3 +90,43 @@ val numbers: List[Int] = List(2, 4, 5, 7)
 val yieldResults = for (i <- numbers) yield i * 4
 
 println(yieldResults)
+
+// Using Traits
+
+trait Logging {
+  def info(message: String): Unit
+  def error(message: String): Unit
+  def warning(message: String): Unit
+}
+
+trait StdOut extends Logging {
+  def info(message: String): Unit = println(s"info $message")
+
+  def warning(message: String): Unit = println(s"Warning message: $message")
+
+  def error(message: String): Unit = println(s"Error message: $message")
+}
+
+class ServiceImportante(name: String) {
+  def work(i: Int): Int = {
+    println(s"ServiceImportante: Doing important work! $i")
+    i + 1
+  }
+}
+
+val service2 = new ServiceImportante("dos") with StdOut {
+  override def work(i: Int): Int = {
+    warning(s"This is a waring from dos and Sarp")
+    info(s"Starting work: i = $i")
+    val result = super.work(i)
+    info(s"Ending work: i = $i, result = $result")
+    result
+  }
+}
+
+(1 until 4).foreach(i => {
+  println(s"The result is ${service2.work(i)}")
+})
+
+
+
