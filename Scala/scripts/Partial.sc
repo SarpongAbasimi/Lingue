@@ -128,5 +128,21 @@ val service2 = new ServiceImportante("dos") with StdOut {
   println(s"The result is ${service2.work(i)}")
 })
 
+// Pattern matching Case Class
 
+case class Address(street: String, city: String, 
+                  postCode: String)
+case class Persons(name: String, address: Address)
 
+val sam = Persons("Sam", Address("df", "Ldn", "B21"))
+val am = Persons("am", Address("dfs", "Ldns", "B22"))
+
+val personSeq: Seq[Persons] = Seq(sam, am)
+
+for( seq <- personSeq){
+  seq match {
+    case Persons("Sam", Address("df", "Ldn", _)) =>
+    println(s"yasss, $seq")
+    case _ => println(s"hahahahaha $seq")
+  }
+}
