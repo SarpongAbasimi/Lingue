@@ -26,3 +26,18 @@ def cat2(s1: String)(s2: String) {
 val n = cat2("Hello") _
 
 println(n("world"))
+
+// Construction of List O(N)
+
+val listOne: List[String] = List("name", "age")
+println(listOne)
+
+val list2 = "name" :: "age" :: Nil
+
+// O(1)
+
+val vector : Vector[String] = Vector("name", "age")
+
+val b = vector :+ "another thing" //Append
+
+val c = "nect" +: b //prepend
