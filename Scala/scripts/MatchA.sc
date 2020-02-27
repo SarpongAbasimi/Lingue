@@ -41,3 +41,16 @@ val vector : Vector[String] = Vector("name", "age")
 val b = vector :+ "another thing" //Append
 
 val c = "nect" +: b //prepend
+
+// Uisng Maps In Scala
+
+val countiesAndTheirCapitals = Map("China" -> " Bejin", "Italy" -> "Roma")
+
+countiesAndTheirCapitals map {
+  eachKey => (eachKey._1, eachKey._2.length)
+}
+
+//
+for((key, value) <- countiesAndTheirCapitals){
+  println(s"Country: $key, lenght: ${value.length}")
+}
