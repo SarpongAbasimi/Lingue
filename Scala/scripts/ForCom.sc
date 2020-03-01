@@ -49,3 +49,23 @@ def gereaterThanOne(aNumber: Int): Try[Int] = Try{
   assert(aNumber > 1,"jnj")
   aNumber
 }
+
+// Auxiliary Cons
+
+class Name {
+  private var name: String = ""
+  private var secondName: String = ""
+  def show: Unit = {
+    println(s"This the the fist $name")
+    println(s"This is my second name $secondName")
+  }
+
+  def this(name: String, secondName: String) = {
+    this()
+    this.name = name
+    this.secondName = secondName
+  }
+}
+
+val ams = new Name("ere", "erewe")
+ams.show
