@@ -69,3 +69,22 @@ class Name {
 
 val ams = new Name("ere", "erewe")
 ams.show
+
+
+// Covariance in scala
+
+trait Human {
+  def name(aName:String) = aName
+  def age(aNumber: Int) = aNumber
+}
+
+case class Person(name:String, age: String) extends Human
+case class Yaw(name: String, age: String) extends Human
+
+
+
+def someFunction[A <: Human](aperSson: A): String = "hey" 
+
+val p = Person("ns", "44")
+val c = Yaw("ns", "90")
+someFunction(c)
