@@ -88,3 +88,17 @@ def someFunction[A <: Human](aperSson: A): String = "hey"
 val p = Person("ns", "44")
 val c = Yaw("ns", "90")
 someFunction(c)
+
+// eg - 2 
+abstract class Animal {
+  def name: String
+}
+
+class Cat(name: String) extends Animal
+class Dog(name: String) extends Animal
+
+object PrintNames {
+  def printNameOfAnimals(listOfAnimals: List[Animal]): Unit = {
+    listOfAnimals.foreach(a => a.name)
+  }
+}
