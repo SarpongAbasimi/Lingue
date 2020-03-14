@@ -146,3 +146,15 @@ for( seq <- personSeq){
     case _ => println(s"hahahahaha $seq")
   }
 }
+
+//Value classes (They are used for optimization to avoid creating new class instance)
+//Reson for Error -> https://github.com/scalacenter/scastie/issues/80
+
+case class PersonName(name: String) extends AnyVal
+case class PersonAge(age: Int) extends AnyVal
+
+class Persona(name: PersonName, age: PersonAge) {
+  override def toString() = {
+    s"Name: $name, Age: $age"
+  }
+}

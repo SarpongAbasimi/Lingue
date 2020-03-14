@@ -102,3 +102,8 @@ object PrintNames {
     listOfAnimals.foreach(a => a.name)
   }
 }
+
+"""" 
+Conclusion: an invariant class Cage does not preserve the inheritance 
+relationship between its type arguments.
+""""
