@@ -158,3 +158,15 @@ class Persona(name: PersonName, age: PersonAge) {
     s"Name: $name, Age: $age"
   }
 }
+
+// Implicit class
+// https://stackoverflow.com/questions/40878893/implicit-classes-in-scala
+
+import scala.language.postfixOps
+implicit class Name(name: String){
+  def callName = {
+    println(name)
+  }
+}
+
+"I get it now" callName
