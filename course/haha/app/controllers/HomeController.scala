@@ -4,6 +4,9 @@ import javax.inject._
 import play.api._
 import play.api.mvc._
 
+import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
+
 /**
  * This controller creates an `Action` to handle HTTP requests to the
  * application's home page.
@@ -24,5 +27,13 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
 
   def hello(name: String) = Action { implicit request : Request[AnyContent] =>
     Ok(views.html.hello(name))
-  } 
+  }
+
+//  def hi: Action[AnyContent] = Action {
+//    implicit request =>
+//      Status(200)("Yes yes yes")
+//  }
+
+// This wiill ususally be used when fetching data etc
+  def hi: Action[AnyContent] = Action.async(Future(Ok("hello it worked")))
 }

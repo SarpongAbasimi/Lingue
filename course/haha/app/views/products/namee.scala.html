@@ -1,0 +1,9 @@
+@(name: Seq[Names])
+
+@main("Name"){
+  <div>
+    @name.map{ personName =>
+      <li>@personName.fullName</li>
+      }
+  </div>
+}
