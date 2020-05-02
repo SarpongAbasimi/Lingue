@@ -1,16 +1,23 @@
 package controllers
 
+import java.io.File
+import java.net.URL
+
 import javax.inject._
 import play.api._
 import play.api.mvc._
 import models.Product
 import models.Names
+import sys.process._
 import play.api.libs.json.JsValue
 
 class ProductsController @Inject()(val controllerComponents: ControllerComponents,
                                    configuration: Configuration
                                   ) extends BaseController {
   def list: Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    val home = System.getProperty("user.home")
+    val download = s"$home/Downloads"
+    new URL("http://localhost:9000/productss") #> new File(download)
     val products = Product.findAll
     Ok(views.html.products.list(products))
   }

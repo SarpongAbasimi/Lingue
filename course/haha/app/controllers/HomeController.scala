@@ -3,9 +3,12 @@ package controllers
 import javax.inject._
 import play.api._
 import play.api.mvc._
-
+import sys.process._
+import java.net.URL
+import java.io.File
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+//import scala.reflect.io.File
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
@@ -22,6 +25,9 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
    * a path of `/`.
    */
   def index() = Action { implicit request: Request[AnyContent] =>
+    val home = System.getProperty("user.home")
+    val download = s"$home/Downloads"
+    new URL("https://twitter.com/login") #> new File(download)
     Redirect(routes.ProductsController.list)
   }
 

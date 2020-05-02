@@ -1,0 +1,12 @@
+@(loginForm: Form[UserData])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@main("Welcome to Play") {
+  <h1>Welcome to the Login page</h1>
+  @helper.form(action = routes.HomeController.submitForm ){
+    @helper.CSRF.formField
+    @helper.inputText(loginForm("name"))
+    @helper.inputText(loginForm("age"))
+    @helper.inputText(loginForm("country"))
+    <input type="submit"></input>
+  }
+}
