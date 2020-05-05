@@ -8,5 +8,9 @@ GET     /                           controllers.HomeController.index
 POST   /submitForm                controllers.HomeController.submitForm
 GET   /success                    controllers.HomeController.successPage
 GET  /api                         controllers.HomeController.buildApi
+GET /learn                         controllers.TestingController.handlingResponse
+GET /flash                         controllers.TestingController.flashing
+GET /save                          controllers.TestingController.save
+POST /new                          controllers.TestingController.fourthAction
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

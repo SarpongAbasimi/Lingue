@@ -1,0 +1,6 @@
+@()(implicit flash: Flash)
+
+@main("flashing"){
+@flash.get("Flask").getOrElse("Nope")
+<h1>Hey</h1>
+}
