@@ -11,6 +11,8 @@ GET  /api                         controllers.HomeController.buildApi
 GET /learn                         controllers.TestingController.handlingResponse
 GET /flash                         controllers.TestingController.flashing
 GET /save                          controllers.TestingController.save
+GET /req                           controllers.TestingController.fistAction
++ nocsrf
 POST /new                          controllers.TestingController.fourthAction
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
