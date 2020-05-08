@@ -14,5 +14,6 @@ GET /save                          controllers.TestingController.save
 GET /req                           controllers.TestingController.fistAction
 + nocsrf
 POST /new                          controllers.TestingController.fourthAction
+GET /js                            controllers.TestingController.scalaToJson
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
