@@ -1,0 +1,10 @@
+{% extends 'layout.html'%}
+{% block content %}
+  {% for elements in json %}
+  <div>
+    <p>{{ elements.postId}}</p> | <span>{{ elements.id}}</span>
+    <p>{{ elements.name }} | email: {{ elements.email}}</p>
+    <span>{{ elements.body}}</span>
+  </div>
+  {% endfor %}
+{% endblock content %}
