@@ -1,0 +1,15 @@
+.searchBar{
+  background-color: #c6e3fa;
+  height: 50px;
+  border-radius: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.searchField{
+  flex-grow: 1;
+  border-radius: 20px;
+  appearance: none;
+  border:0;
+}
