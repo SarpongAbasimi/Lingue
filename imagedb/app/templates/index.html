@@ -2,5 +2,11 @@
 
 {% block content %}
   <div>
+    <a href={{ url_for('main.new') }}>Create a new todo</a>
+    {% for items in list_of_todos %}
+      <ul>
+        <li><a href= {{ url_for('main.show', id=items.id ) }}>{{ items.todo }}</a></li>
+      </ul>
+    {% endfor %}
   </div>
 {% endblock %}

@@ -2,8 +2,11 @@
 
 {% block content %}
   <div>
-    <form action="" method="POST">
+    <form action="/create" method="POST">
       {{ form.csrf_token }}
+      {{ form.name.label }} {{ form.name }}
+      {{ form.submit }}
     </form>
+    <a href={{ url_for('main.index') }}>index</a>
   </div>
 {% endblock %}
